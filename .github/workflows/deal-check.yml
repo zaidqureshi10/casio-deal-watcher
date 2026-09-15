@@ -1,8 +1,8 @@
 name: Casio deal check
 
 on:
-  schedule:
-    - cron: "*/15 * * * *"   # every 15 minutes - kind to the site and well within free minutes
+  # schedule:
+  #   - cron: "*/15 * * * *"   # every 15 minutes - kind to the site and well within free minutes
   workflow_dispatch: {}       # lets you trigger a run manually from the Actions tab
 
 permissions:
