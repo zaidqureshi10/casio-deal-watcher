@@ -34,7 +34,7 @@ from datetime import datetime, timedelta
 
 # ---------------- Config ----------------
 COLLECTION_URL = "https://casiostore.bhawar.com/collections/watches/products.json"
-DISCOUNT_THRESHOLD = 65          # percent - change if you want a different cutoff
+DISCOUNT_THRESHOLD = 50          # percent - change if you want a different cutoff
 CHECK_INTERVAL_SECONDS = 300     # 5 minutes, used only in loop mode
 SEEN_TTL_HOURS = 24              # a deal "forgotten" after this long can alert again
 
