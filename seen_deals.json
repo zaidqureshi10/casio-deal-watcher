@@ -1,14 +1,4 @@
 {
-  "50750543659289:1897.5": {
-    "id": 50750543659289,
-    "title": "LTP-VT02D-2A",
-    "price": 1897.5,
-    "compare_at": 3795.0,
-    "discount_pct": 50.0,
-    "url": "https://casiostore.bhawar.com/products/casio-ltp-vt02d-2audf-womens-watch?variant=50750543659289",
-    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/LTP-VT02D-2AU.png?v=1751281238",
-    "seen_at": "2026-09-17T12:40:46.026401"
-  },
   "50750551097625:1847.5": {
     "id": 50750551097625,
     "title": "LTP-VT04D-7A",
@@ -58,5 +48,45 @@
     "url": "https://casiostore.bhawar.com/products/casio-ae-1500wh-2avdf-blue-digital-unisex-watch?variant=50750515806489",
     "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/AE-1500WH-2AV.png?v=1751280700",
     "seen_at": "2026-09-17T16:01:16.652071"
+  },
+  "51123917193497:1997.5": {
+    "id": 51123917193497,
+    "title": "MTP-SN5YSR-5A",
+    "price": 1997.5,
+    "compare_at": 3995.0,
+    "discount_pct": 50.0,
+    "url": "https://casiostore.bhawar.com/products/casio-mtp-sn5ysr-5a-analog-mens-watch?variant=51123917193497",
+    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/MTP-SN5YSR-5A_20_1.jpg?v=1754304244",
+    "seen_at": "2026-09-18T13:01:18.943715"
+  },
+  "50750543659289:1897.5": {
+    "id": 50750543659289,
+    "title": "LTP-VT02D-2A",
+    "price": 1897.5,
+    "compare_at": 3795.0,
+    "discount_pct": 50.0,
+    "url": "https://casiostore.bhawar.com/products/casio-ltp-vt02d-2audf-womens-watch?variant=50750543659289",
+    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/LTP-VT02D-2AU.png?v=1751281238",
+    "seen_at": "2026-09-18T13:01:20.614782"
+  },
+  "50750493032729:1647.5": {
+    "id": 50750493032729,
+    "title": "MTP-1314L-7AV",
+    "price": 1647.5,
+    "compare_at": 3295.0,
+    "discount_pct": 50.0,
+    "url": "https://casiostore.bhawar.com/products/casio-mtp-1314l-7avdf-white-analog-mens-watch?variant=50750493032729",
+    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/MTP-1314L-7AV_01.jpg?v=1751280217",
+    "seen_at": "2026-09-18T13:01:21.974322"
+  },
+  "50750535762201:1247.5": {
+    "id": 50750535762201,
+    "title": "W-800H-2AV",
+    "price": 1247.5,
+    "compare_at": 2495.0,
+    "discount_pct": 50.0,
+    "url": "https://casiostore.bhawar.com/products/casio-w-800h-2avdf-watch?variant=50750535762201",
+    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/W-800H-2AV.png?v=1751280983",
+    "seen_at": "2026-09-18T13:01:23.622891"
   }
 }
