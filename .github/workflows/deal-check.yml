@@ -14,6 +14,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Sanity-check required files
+        run: |
+          for f in watch_alert.py item_watch.py tracked_items.json; do
+            if [ -f "$f" ]; then echo "OK      $f"; else echo "MISSING $f"; fi
+          done
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -21,6 +27,9 @@ jobs:
       - name: Run watcher
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          # Send one alert when a tracked item is first seen (baseline), so
+          # item-alert delivery is immediately visible on phone/email.
+          ITEM_ALERT_ON_BASELINE: "true"
           # Store login - optional, the public feed already carries sale prices.
           SHOP_EMAIL: ${{ secrets.SHOP_EMAIL }}
           SHOP_PASSWORD: ${{ secrets.SHOP_PASSWORD }}
@@ -37,6 +46,7 @@ jobs:
         run: python3 watch_alert.py --once
 
       - name: Save seen-deals state
+        if: always()          # still persist state even if the watcher step failed
         run: |
           git config user.name "deal-bot"
           git config user.email "deal-bot@users.noreply.github.com"
@@ -46,5 +56,13 @@ jobs:
           for f in seen_deals.json tracked_prices.json; do
             if [ -f "$f" ]; then git add "$f"; fi
           done
-          git diff --staged --quiet || git commit -m "chore: update seen deals"
-          git push
+          if git diff --staged --quiet; then
+            echo "No state changes to commit."
+          else
+            git commit -m "chore: update seen deals"
+            # Another run may have pushed since checkout; rebase and retry once.
+            git pull --rebase --autostash || true
+            git push
+          fi
+          echo "--- state files in repo after this run ---"
+          ls -l seen_deals.json tracked_prices.json 2>&1 || true
