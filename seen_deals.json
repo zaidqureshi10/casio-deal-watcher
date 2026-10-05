@@ -1,1 +1,22 @@
-{}
+{
+  "50750492475673:1397.5": {
+    "id": 50750492475673,
+    "title": "MTP-1183E-7A",
+    "price": 1397.5,
+    "compare_at": 2795.0,
+    "discount_pct": 50.0,
+    "url": "https://casiostore.bhawar.com/products/casio-mtp-1183e-7adf-white-analog-mens-watch?variant=50750492475673",
+    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/MTP-1183E-7A.png?v=1751280196",
+    "seen_at": "2026-10-05T05:40:52.037763"
+  },
+  "50750552736025:1747.5": {
+    "id": 50750552736025,
+    "title": "MTP-VT04L-7E",
+    "price": 1747.5,
+    "compare_at": 3495.0,
+    "discount_pct": 50.0,
+    "url": "https://casiostore.bhawar.com/products/casio-men-mtp-vt04l-7edf-watch?variant=50750552736025",
+    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/MTP-VT04L-7E.png?v=1751281920",
+    "seen_at": "2026-10-05T05:40:52.469277"
+  }
+}
