@@ -21,9 +21,13 @@ jobs:
       - name: Run watcher
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
-          # Store login - required, the sale prices are only shown to logged-in customers.
+          # Store login - optional, the public feed already carries sale prices.
           SHOP_EMAIL: ${{ secrets.SHOP_EMAIL }}
           SHOP_PASSWORD: ${{ secrets.SHOP_PASSWORD }}
+          # Optional - raw Cookie headers so tracked items use YOUR logged-in
+          # (personalised / offer-applied) prices instead of the public ones.
+          FLIPKART_COOKIE: ${{ secrets.FLIPKART_COOKIE }}
+          AMAZON_COOKIE: ${{ secrets.AMAZON_COOKIE }}
           # Email is optional - only set these secrets if you want email alerts too.
           SMTP_HOST: ${{ secrets.SMTP_HOST }}
           SMTP_PORT: ${{ secrets.SMTP_PORT }}
@@ -36,6 +40,6 @@ jobs:
         run: |
           git config user.name "deal-bot"
           git config user.email "deal-bot@users.noreply.github.com"
-          git add seen_deals.json
+          git add seen_deals.json tracked_prices.json
           git diff --staged --quiet || git commit -m "chore: update seen deals"
           git push
