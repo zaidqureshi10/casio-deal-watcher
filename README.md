@@ -51,6 +51,103 @@ it loose.
 - (Optional) an SMTP account for email alerts — e.g. a Gmail address with
   an [app password](https://myaccount.google.com/apppasswords)
 
+## Watching specific Amazon / Flipkart items
+
+The same run also checks a list of individual product URLs and pings you on
+**any** price drop, however small. Put them in `tracked_items.json`:
+
+```json
+[
+  "https://www.amazon.in/dp/B0XXXXXXXX",
+  {
+    "url": "https://www.flipkart.com/some-watch/p/itmXXXXXXXX",
+    "label": "Casio Duro MDV-106",
+    "target_price": 3000
+  }
+]
+```
+
+- A bare string is fine; the object form adds an optional `label` (friendly
+  name in alerts) and `target_price` (also alert any time it's at or below
+  this, even without a fresh drop).
+- Strings starting with `#` are ignored, so you can comment items out.
+- Or add one from the CLI: `python3 item_watch.py --add "<url>" --label "Name"`
+
+The last seen price per URL is kept in `tracked_prices.json`. The first run
+only records a baseline — alerts start from the second run. The baseline
+follows the price up as well as down, so a dip after a price rise still
+counts as a drop.
+
+```bash
+python3 item_watch.py --dry-run            # just the tracked items
+python3 watch_alert.py --once              # Casio sweep + tracked items
+python3 watch_alert.py --once --no-items   # Casio sweep only
+python3 watch_alert.py --items-only        # tracked items only
+```
+
+### Seeing *your* logged-in price
+
+Flipkart and Amazon personalise prices — e.g. an account-specific "₹408 off"
+offer that drops the Nimbus 27 from ₹8,159 to ₹7,751. That discount is **not
+in the logged-out HTML**, so by default the watcher tracks the public price.
+
+To track your own price, give it your browser's session cookie:
+
+1. Open the product page in your browser, logged in.
+2. DevTools (F12) → **Network** tab → reload the page (Ctrl+R).
+3. Click the **topmost request** — the HTML document, Type `document`,
+   usually named after the product slug.
+4. Under **Request Headers**, find the `Cookie:` row → right-click →
+   **Copy value**. Copy the *entire* line, not individual cookies: the
+   personalised price depends on several of them together (session + auth
+   token + account id), so cherry-picking `SN` or `at` won't work.
+
+   > Don't use Application → Cookies for this — it lists cookies one per row
+   > and you'd have to reassemble them into `name=value; name=value; …`
+   > yourself. The Network tab gives you that string ready-made.
+
+5. Put it on **one line** in `.env` (or a GitHub secret of the same name):
+
+```
+FLIPKART_COOKIE=K-ACTION=...; T=...; SN=...
+AMAZON_COOKIE=session-id=...; x-main=...; at-acbin=...
+```
+
+Then verify it's actually being honoured:
+
+```bash
+python3 item_watch.py --compare-cookie
+```
+
+This fetches each item twice — once anonymously, once with your cookie — and
+prints both prices side by side:
+
+```
+      public    logged-in   item
+   Rs.8,159     Rs.7,751    Asics Gel Nimbus 27 (men)  <- cookie working, personalised price found
+```
+
+If both columns match on a product you know is personalised, the cookie has
+expired or too few cookies were copied.
+
+The normal run also prints `(using logged-in cookies: FLIPKART_COOKIE)` when
+one is active. Caveats: these cookies **are** your login — treat them like
+passwords, never commit them (`.env` is gitignored). They expire every few
+weeks, so re-copy when prices suddenly revert to the public figure.
+
+### Caveat: Amazon blocks bots
+
+Amazon frequently serves a captcha page to datacenter IPs — which is exactly
+what GitHub Actions runs on. When that happens you'll see
+`BOT CHECK` in the log and that item is skipped (its stored price is left
+untouched, so no false "drop" alert later). Flipkart is usually more
+tolerant. If Amazon blocks you persistently, run the watcher from your own
+machine or a home server instead of Actions, where it works reliably.
+
+Price extraction tries JSON-LD structured data first, then OpenGraph/microdata
+meta tags, then Amazon/Flipkart-specific patterns — so most other shops work
+out of the box too.
+
 ## Running locally
 
 Create a `.env` file next to `watch_alert.py` (already gitignored, never
@@ -62,6 +159,10 @@ NTFY_TOPIC=pick-something-long-and-random
 # Optional - browse with a logged-in session (not needed for prices)
 SHOP_EMAIL=you@example.com
 SHOP_PASSWORD=your_store_password
+
+# Optional - track your personalised Flipkart/Amazon prices (see above)
+FLIPKART_COOKIE=
+AMAZON_COOKIE=
 
 # Optional - only add these if you also want email alerts
 SMTP_HOST=smtp.gmail.com
