@@ -367,7 +367,27 @@ def notify_deal(deal):
     print(f"Notified: {deal['title']} - {deal['discount_pct']}% off")
 
 
-def run_once(dry_run=False):
+def test_notify():
+    """Send one fake alert, so you can prove the phone actually buzzes."""
+    if NTFY_TOPIC == "casio-deals-CHANGE-ME":
+        print("NTFY_TOPIC is not set! Alerts are going to the default public "
+              "topic, not yours - that's why your phone is silent.\n"
+              "Add NTFY_TOPIC=<your-topic> to .env (and as a GitHub secret).")
+        return
+    print(f"Sending a test alert to ntfy topic '{NTFY_TOPIC}'"
+          + (f" and email to {EMAIL_TO}" if EMAIL_ENABLED else " (email disabled)"))
+    notify_deal({
+        "id": "test",
+        "title": "TEST ALERT - if you can read this, notifications work",
+        "price": 1234,
+        "compare_at": 2468,
+        "discount_pct": 50.0,
+        "url": "https://example.com",
+        "image_url": None,
+    })
+
+
+def run_once(dry_run=False, skip_items=False):
     seen = load_seen()
     opener = make_session()
     login(opener)
@@ -383,21 +403,57 @@ def run_once(dry_run=False):
             print(f"  {deal['discount_pct']:>5}% off  Rs.{deal['price']:>9,.0f} "
                   f"(was Rs.{deal['compare_at']:>9,.0f})  {deal['title']}")
         print("Dry run - no notifications sent, state not written.")
-        return len(deals)
+    else:
+        new_deals = 0
+        for deal in deals:
+            key = f"{deal['id']}:{deal['price']}"
+            if key not in seen:
+                notify_deal(deal)
+                seen[key] = {**deal, "seen_at": datetime.now().isoformat()}
+                new_deals += 1
 
-    new_deals = 0
-    for deal in deals:
-        key = f"{deal['id']}:{deal['price']}"
-        if key not in seen:
-            notify_deal(deal)
-            seen[key] = {**deal, "seen_at": datetime.now().isoformat()}
-            new_deals += 1
+        if new_deals == 0:
+            print("No new deals above threshold.")
 
-    if new_deals == 0:
-        print("No new deals above threshold.")
+        save_seen(seen)  # always save, so expired entries actually get pruned from disk
 
-    save_seen(seen)  # always save, so expired entries actually get pruned from disk
-    return new_deals
+    if not skip_items:
+        run_item_watch(dry_run=dry_run)
+
+    return len(deals) if dry_run else new_deals
+
+
+def run_item_watch(dry_run=False):
+    """
+    Second half of a run: check the specific Amazon/Flipkart product URLs in
+    tracked_items.json and alert on ANY price drop. Kept in its own module so
+    a failure there (bot-check page, site redesign) can never stop the Casio
+    sweep from reporting.
+    """
+    print("\n--- Tracked items ---")
+
+    items_file = Path(__file__).with_name("tracked_items.json")
+    module_file = Path(__file__).with_name("item_watch.py")
+    if not module_file.exists():
+        print("item_watch.py is MISSING from this directory - tracked items "
+              "cannot be checked.\nIf you're on GitHub Actions, make sure "
+              "item_watch.py was committed/uploaded to the repo.")
+        return
+    if not items_file.exists():
+        print("tracked_items.json is MISSING from this directory - nothing to "
+              "watch.\nIf you're on GitHub Actions, make sure "
+              "tracked_items.json was committed/uploaded to the repo.")
+        return
+
+    try:
+        import item_watch
+    except Exception as e:
+        print(f"Could not import item_watch.py: {e}")
+        return
+    try:
+        item_watch.check_items(notify_deal, dry_run=dry_run)
+    except Exception as e:
+        print(f"Item watch failed: {e}")
 
 
 def main_loop():
@@ -418,11 +474,21 @@ if __name__ == "__main__":
     parser.add_argument("--once", action="store_true", help="Run a single check and exit")
     parser.add_argument("--dry-run", action="store_true",
                         help="List every current deal without notifying or touching state")
+    parser.add_argument("--no-items", action="store_true",
+                        help="Skip the tracked_items.json Amazon/Flipkart check")
+    parser.add_argument("--items-only", action="store_true",
+                        help="Only check tracked_items.json, skip the Casio store sweep")
+    parser.add_argument("--test-notify", action="store_true",
+                        help="Send one fake alert to prove notifications are wired up")
     args = parser.parse_args()
 
-    if args.dry_run:
-        run_once(dry_run=True)
+    if args.test_notify:
+        test_notify()
+    elif args.items_only:
+        run_item_watch(dry_run=args.dry_run)
+    elif args.dry_run:
+        run_once(dry_run=True, skip_items=args.no_items)
     elif args.once:
-        run_once()
+        run_once(skip_items=args.no_items)
     else:
         main_loop()
