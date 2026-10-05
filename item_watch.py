@@ -48,6 +48,19 @@ REQUEST_TIMEOUT = 40
 RETRIES = 3
 DELAY_BETWEEN_ITEMS = 4      # seconds - be polite, and avoid tripping bot defences
 
+
+def env_flag(name, default=False):
+    value = os.environ.get(name)
+    if value is None:
+        return default
+    return value.strip().lower() in {"1", "true", "yes", "on"}
+
+
+# If true, the *first* time an item is seen (baseline run), send one
+# notification so you can verify the alert path is wired for tracked items.
+# This does NOT repeat on every run - only when previous price is missing.
+ITEM_ALERT_ON_BASELINE = env_flag("ITEM_ALERT_ON_BASELINE", default=False)
+
 BROWSER_HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -400,8 +413,12 @@ def check_items(notify, dry_run=False):
         return 0
 
     state = load_state()
+    first_ever = not STATE_FILE.exists()
     alerts = 0
     print(f"Checking {len(items)} tracked item(s)...")
+    if first_ever and not dry_run:
+        print("  (no tracked_prices.json yet - this run only records baseline "
+              "prices; alerts start from the next run)")
 
     configured = sorted({
         env for env in COOKIE_ENV_BY_DOMAIN.values() if os.environ.get(env)
@@ -441,6 +458,17 @@ def check_items(notify, dry_run=False):
 
         if previous is None:
             print(f"  baseline  Rs.{price:>10,.0f}  {title}")
+            if ITEM_ALERT_ON_BASELINE and not dry_run:
+                notify({
+                    "id": f"baseline:{url}",
+                    "title": f"Tracking started: {title}",
+                    "price": price,
+                    "compare_at": price,
+                    "discount_pct": 0.0,
+                    "url": url,
+                    "image_url": image_from_html(html),
+                })
+                alerts += 1
         elif price < previous:
             drop = previous - price
             pct = drop / previous * 100
@@ -483,9 +511,15 @@ def check_items(notify, dry_run=False):
         }
 
     if dry_run:
-        print("Dry run - no notifications sent, state not written.")
+        print("Dry run - no notifications sent, state not written.\n"
+              "  (a dry run never saves a baseline, so every item will keep\n"
+              "   showing 'baseline' until you run without --dry-run)")
     else:
         save_state(state)
+        if first_ever:
+            print(f"Baseline saved to {STATE_FILE.name}. On GitHub Actions this "
+                  "file MUST be committed between runs,\n  otherwise every run "
+                  "starts from scratch and you will never get a drop alert.")
     return alerts
 
 
