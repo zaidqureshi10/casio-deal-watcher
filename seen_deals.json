@@ -1,34 +1,4 @@
 {
-  "51838292328729:2747.5": {
-    "id": 51838292328729,
-    "title": "LTP-SN6KGSL-7A",
-    "price": 2747.5,
-    "compare_at": 5495.0,
-    "discount_pct": 50.0,
-    "url": "https://casiostore.bhawar.com/products/ltp-sn6kgsl-7a?variant=51838292328729",
-    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/LTP-SN6KGSL-7A_1.jpg?v=1767945484",
-    "seen_at": "2026-10-08T20:40:57.604938"
-  },
-  "51838294196505:1897.5": {
-    "id": 51838294196505,
-    "title": "LTP-SN8YGL-7B",
-    "price": 1897.5,
-    "compare_at": 3795.0,
-    "discount_pct": 50.0,
-    "url": "https://casiostore.bhawar.com/products/ltp-sn8ygl-7b?variant=51838294196505",
-    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/LTP-SN8YGL-7B_1.jpg?v=1767946416",
-    "seen_at": "2026-10-08T20:40:59.197264"
-  },
-  "51838294393113:1897.5": {
-    "id": 51838294393113,
-    "title": "LTP-SN8YRL-1B",
-    "price": 1897.5,
-    "compare_at": 3795.0,
-    "discount_pct": 50.0,
-    "url": "https://casiostore.bhawar.com/products/ltp-sn8yrl-1b?variant=51838294393113",
-    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/LTP-SN8YRL-1B_1.jpg?v=1767946580",
-    "seen_at": "2026-10-08T20:41:00.639666"
-  },
   "51123922927897:1797.5": {
     "id": 51123922927897,
     "title": "LTP-SN5YD-2A",
@@ -128,5 +98,25 @@
     "url": "https://casiostore.bhawar.com/products/casio-ltp-vt04d-7adf-white-analog-womens-watch?variant=50750551097625",
     "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/LTP-VT04D-7A.png?v=1751281838",
     "seen_at": "2026-10-09T07:21:21.364925"
+  },
+  "51838292328729:2747.5": {
+    "id": 51838292328729,
+    "title": "LTP-SN6KGSL-7A",
+    "price": 2747.5,
+    "compare_at": 5495.0,
+    "discount_pct": 50.0,
+    "url": "https://casiostore.bhawar.com/products/ltp-sn6kgsl-7a?variant=51838292328729",
+    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/LTP-SN6KGSL-7A_1.jpg?v=1767945484",
+    "seen_at": "2026-10-09T21:01:35.418214"
+  },
+  "51838294196505:1897.5": {
+    "id": 51838294196505,
+    "title": "LTP-SN8YGL-7B",
+    "price": 1897.5,
+    "compare_at": 3795.0,
+    "discount_pct": 50.0,
+    "url": "https://casiostore.bhawar.com/products/ltp-sn8ygl-7b?variant=51838294196505",
+    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/LTP-SN8YGL-7B_1.jpg?v=1767946416",
+    "seen_at": "2026-10-09T21:01:36.799617"
   }
 }
