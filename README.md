@@ -8,13 +8,7 @@ notification and (optionally) email.
 
 1. Sweeps the public Shopify JSON feeds for `/collections/all` **plus**
    `watches`, `edifice-watches`, `g-shock`, `casio-vintage`, `casio` and
-   `new-launch`, de-duplicating by product handle (~1,360 unique products).
-
-   > Why not just `/collections/watches`? Because that collection only
-   > exposes ~407 products. Plenty of discounted models — MTP-VT01G-9B at
-   > 50% off, for example — simply aren't tagged into it, so watching that
-   > one collection silently missed them.
-
+   `new-launch`, de-duplicating by product handle.
 2. Computes the real discount percentage itself from `price` vs.
    `compare_at_price`, rather than relying on the site's own "% off" tag.
    (The collection *pages* render `MRP ₹ … (0% Off)` on every card because
