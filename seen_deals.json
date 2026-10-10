@@ -1,24 +1,4 @@
 {
-  "51838292328729:2747.5": {
-    "id": 51838292328729,
-    "title": "LTP-SN6KGSL-7A",
-    "price": 2747.5,
-    "compare_at": 5495.0,
-    "discount_pct": 50.0,
-    "url": "https://casiostore.bhawar.com/products/ltp-sn6kgsl-7a?variant=51838292328729",
-    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/LTP-SN6KGSL-7A_1.jpg?v=1767945484",
-    "seen_at": "2026-10-09T21:01:35.418214"
-  },
-  "51838294196505:1897.5": {
-    "id": 51838294196505,
-    "title": "LTP-SN8YGL-7B",
-    "price": 1897.5,
-    "compare_at": 3795.0,
-    "discount_pct": 50.0,
-    "url": "https://casiostore.bhawar.com/products/ltp-sn8ygl-7b?variant=51838294196505",
-    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/LTP-SN8YGL-7B_1.jpg?v=1767946416",
-    "seen_at": "2026-10-09T21:01:36.799617"
-  },
   "51123922927897:1797.5": {
     "id": 51123922927897,
     "title": "LTP-SN5YD-2A",
@@ -408,5 +388,25 @@
     "url": "https://casiostore.bhawar.com/products/casio-ws-1500h-2avdf-watch?variant=50750536384793",
     "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/WS-1500H-2AV.png?v=1751281022",
     "seen_at": "2026-10-10T13:21:49.789502"
+  },
+  "51838292328729:2747.5": {
+    "id": 51838292328729,
+    "title": "LTP-SN6KGSL-7A",
+    "price": 2747.5,
+    "compare_at": 5495.0,
+    "discount_pct": 50.0,
+    "url": "https://casiostore.bhawar.com/products/ltp-sn6kgsl-7a?variant=51838292328729",
+    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/LTP-SN6KGSL-7A_1.jpg?v=1767945484",
+    "seen_at": "2026-10-10T21:20:56.045457"
+  },
+  "51838294196505:1897.5": {
+    "id": 51838294196505,
+    "title": "LTP-SN8YGL-7B",
+    "price": 1897.5,
+    "compare_at": 3795.0,
+    "discount_pct": 50.0,
+    "url": "https://casiostore.bhawar.com/products/ltp-sn8ygl-7b?variant=51838294196505",
+    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/LTP-SN8YGL-7B_1.jpg?v=1767946416",
+    "seen_at": "2026-10-10T21:20:56.704284"
   }
 }
