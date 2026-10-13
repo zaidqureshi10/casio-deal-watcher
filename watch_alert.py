@@ -65,7 +65,7 @@ COLLECTIONS = [
 
 DISCOUNT_THRESHOLD = 50          # percent - change if you want a different cutoff
 CHECK_INTERVAL_SECONDS = 300     # 5 minutes, used only in loop mode
-SEEN_TTL_HOURS = 24              # a deal "forgotten" after this long can alert again
+SEEN_TTL_HOURS = 48              # a deal "forgotten" after this long can alert again
 MAX_COLLECTION_PAGES = 40        # safety stop when paging a collection feed
 
 # Store login - optional. The public feed already carries the sale prices,
