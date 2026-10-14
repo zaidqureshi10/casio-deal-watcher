@@ -1,34 +1,4 @@
 {
-  "50750539694361:2147.5": {
-    "id": 50750539694361,
-    "title": "LTP-1275SG-9A",
-    "price": 2147.5,
-    "compare_at": 4295.0,
-    "discount_pct": 50.0,
-    "url": "https://casiostore.bhawar.com/products/casio-ltp-1275sg-9adf-womens-watch?variant=50750539694361",
-    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/LTP-1275SG-9A.png?v=1751281117",
-    "seen_at": "2026-10-12T11:20:58.350247"
-  },
-  "50750551097625:1847.5": {
-    "id": 50750551097625,
-    "title": "LTP-VT04D-7A",
-    "price": 1847.5,
-    "compare_at": 3695.0,
-    "discount_pct": 50.0,
-    "url": "https://casiostore.bhawar.com/products/casio-ltp-vt04d-7adf-white-analog-womens-watch?variant=50750551097625",
-    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/LTP-VT04D-7A.png?v=1751281838",
-    "seen_at": "2026-10-12T11:20:59.395410"
-  },
-  "50750535237913:747.5": {
-    "id": 50750535237913,
-    "title": "W-218HM-5BV",
-    "price": 747.5,
-    "compare_at": 1495.0,
-    "discount_pct": 50.0,
-    "url": "https://casiostore.bhawar.com/products/casio-w-218hm-5bvdf-black-digital-mens-watch?variant=50750535237913",
-    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/W-218HM-5BV.png?v=1751280975",
-    "seen_at": "2026-10-12T11:21:00.467964"
-  },
   "50750539333913:1397.5": {
     "id": 50750539333913,
     "title": "LTP-1241D-4A",
@@ -388,5 +358,15 @@
     "url": "https://casiostore.bhawar.com/products/casio-men-mtp-vt04l-7edf-watch?variant=50750552736025",
     "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/MTP-VT04L-7E.png?v=1751281920",
     "seen_at": "2026-10-14T10:21:10.777968"
+  },
+  "50750551097625:1847.5": {
+    "id": 50750551097625,
+    "title": "LTP-VT04D-7A",
+    "price": 1847.5,
+    "compare_at": 3695.0,
+    "discount_pct": 50.0,
+    "url": "https://casiostore.bhawar.com/products/casio-ltp-vt04d-7adf-white-analog-womens-watch?variant=50750551097625",
+    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/LTP-VT04D-7A.png?v=1751281838",
+    "seen_at": "2026-10-14T11:40:58.784333"
   }
 }
