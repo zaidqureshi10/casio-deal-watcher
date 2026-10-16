@@ -1,94 +1,4 @@
 {
-  "51199082922265:1497.5": {
-    "id": 51199082922265,
-    "title": "LF-30W-8A",
-    "price": 1497.5,
-    "compare_at": 2995.0,
-    "discount_pct": 50.0,
-    "url": "https://casiostore.bhawar.com/products/casio-lf-30w-8a-silver-digital-unisex-watch?variant=51199082922265",
-    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/LF-30W-8A.png?v=1755868276",
-    "seen_at": "2026-10-14T12:21:02.477099"
-  },
-  "50750538187033:1497.5": {
-    "id": 50750538187033,
-    "title": "LTP-1230D-1C",
-    "price": 1497.5,
-    "compare_at": 2995.0,
-    "discount_pct": 50.0,
-    "url": "https://casiostore.bhawar.com/products/casio-ltp-1230d-1cdf-black-analog-womens-watch?variant=50750538187033",
-    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/LTP-1230D-1C_01.jpg?v=1751281095",
-    "seen_at": "2026-10-14T12:21:04.319107"
-  },
-  "50750538219801:1847.5": {
-    "id": 50750538219801,
-    "title": "LTP-1234DD-1A",
-    "price": 1847.5,
-    "compare_at": 3695.0,
-    "discount_pct": 50.0,
-    "url": "https://casiostore.bhawar.com/products/casio-ladies-ltp-1234dd-1adf-watch?variant=50750538219801",
-    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/LTP-1234DD-1A.png?v=1751281097",
-    "seen_at": "2026-10-14T12:21:06.118223"
-  },
-  "51572638941465:1747.5": {
-    "id": 51572638941465,
-    "title": "LTP-1303LL-7A",
-    "price": 1747.5,
-    "compare_at": 3495.0,
-    "discount_pct": 50.0,
-    "url": "https://casiostore.bhawar.com/products/ltp-1303ll-7a?variant=51572638941465",
-    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/LTP-1303LL-7AV.png?v=1761792072",
-    "seen_at": "2026-10-14T12:21:09.597171"
-  },
-  "51123925582105:1797.5": {
-    "id": 51123925582105,
-    "title": "LTP-SN5YGL-2A",
-    "price": 1797.5,
-    "compare_at": 3595.0,
-    "discount_pct": 50.0,
-    "url": "https://casiostore.bhawar.com/products/casio-ltp-sn5ygl-2a-analog-womens-watch?variant=51123925582105",
-    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/LTP-SN5YGL-2A_20_1.jpg?v=1754304485",
-    "seen_at": "2026-10-14T12:21:13.702237"
-  },
-  "51261501866265:2497.5": {
-    "id": 51261501866265,
-    "title": "MTP-1302DS-1A",
-    "price": 2497.5,
-    "compare_at": 4995.0,
-    "discount_pct": 50.0,
-    "url": "https://casiostore.bhawar.com/products/casio-mtp-1302ds-1a-mother-of-pearl-mens-watch?variant=51261501866265",
-    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/MTP-1302DS-1AV.png?v=1757308982",
-    "seen_at": "2026-10-14T12:21:15.541335"
-  },
-  "50750497030425:1497.5": {
-    "id": 50750497030425,
-    "title": "MTP-VD01BL-1BV",
-    "price": 1497.5,
-    "compare_at": 2995.0,
-    "discount_pct": 50.0,
-    "url": "https://casiostore.bhawar.com/products/casio-mtp-vd01bl-1bvudf-black-analog-mens-watch?variant=50750497030425",
-    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/MTP-VD01BL-1BVU.png?v=1751280337",
-    "seen_at": "2026-10-14T12:21:16.969796"
-  },
-  "51199084888345:947.5": {
-    "id": 51199084888345,
-    "title": "W-218H-3BV",
-    "price": 947.5,
-    "compare_at": 1895.0,
-    "discount_pct": 50.0,
-    "url": "https://casiostore.bhawar.com/products/casio-w-218h-3bv-green-digital-unisex-watch?variant=51199084888345",
-    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/W-218H-3BV.png?v=1755868369",
-    "seen_at": "2026-10-14T12:21:19.350069"
-  },
-  "50750535729433:747.5": {
-    "id": 50750535729433,
-    "title": "W-218HM-7AV",
-    "price": 747.5,
-    "compare_at": 1495.0,
-    "discount_pct": 50.0,
-    "url": "https://casiostore.bhawar.com/products/casio-w-218hm-7avdf-silver-digital-unisex-watch?variant=50750535729433",
-    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/W-218HM-7AV.png?v=1751280979",
-    "seen_at": "2026-10-14T12:21:20.771663"
-  },
   "51838294196505:1897.5": {
     "id": 51838294196505,
     "title": "LTP-SN8YGL-7B",
@@ -348,5 +258,25 @@
     "url": "https://casiostore.bhawar.com/products/casio-ltp-vt04d-7adf-white-analog-womens-watch?variant=50750551097625",
     "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/LTP-VT04D-7A.png?v=1751281838",
     "seen_at": "2026-10-16T12:01:39.470757"
+  },
+  "51572638941465:1747.5": {
+    "id": 51572638941465,
+    "title": "LTP-1303LL-7A",
+    "price": 1747.5,
+    "compare_at": 3495.0,
+    "discount_pct": 50.0,
+    "url": "https://casiostore.bhawar.com/products/ltp-1303ll-7a?variant=51572638941465",
+    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/LTP-1303LL-7AV.png?v=1761792072",
+    "seen_at": "2026-10-16T12:40:56.506809"
+  },
+  "51123925582105:1797.5": {
+    "id": 51123925582105,
+    "title": "LTP-SN5YGL-2A",
+    "price": 1797.5,
+    "compare_at": 3595.0,
+    "discount_pct": 50.0,
+    "url": "https://casiostore.bhawar.com/products/casio-ltp-sn5ygl-2a-analog-womens-watch?variant=51123925582105",
+    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/LTP-SN5YGL-2A_20_1.jpg?v=1754304485",
+    "seen_at": "2026-10-16T12:40:58.178483"
   }
 }
