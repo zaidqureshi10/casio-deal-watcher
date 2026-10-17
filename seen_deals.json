@@ -1,14 +1,4 @@
 {
-  "51838289248537:2497.5": {
-    "id": 51838289248537,
-    "title": "LTP-SN6KGL-2A",
-    "price": 2497.5,
-    "compare_at": 4995.0,
-    "discount_pct": 50.0,
-    "url": "https://casiostore.bhawar.com/products/ltp-sn6kgl-2a?variant=51838289248537",
-    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/LTP-SN6KGL-2A_1.jpg?v=1767945239",
-    "seen_at": "2026-10-15T05:40:52.234398"
-  },
   "50750500765977:2497.5": {
     "id": 50750500765977,
     "title": "MTP-VT01G-9B",
@@ -238,5 +228,15 @@
     "url": "https://casiostore.bhawar.com/products/casio-ltp-vt01l-7b1udf-womens-watch?variant=50750543331609",
     "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/LTP-VT01L-7B1_Seq1.jpg?v=1751281213",
     "seen_at": "2026-10-16T14:41:15.390028"
+  },
+  "51838289248537:2497.5": {
+    "id": 51838289248537,
+    "title": "LTP-SN6KGL-2A",
+    "price": 2497.5,
+    "compare_at": 4995.0,
+    "discount_pct": 50.0,
+    "url": "https://casiostore.bhawar.com/products/ltp-sn6kgl-2a?variant=51838289248537",
+    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/LTP-SN6KGL-2A_1.jpg?v=1767945239",
+    "seen_at": "2026-10-17T06:01:27.147198"
   }
 }
