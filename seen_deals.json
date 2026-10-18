@@ -1,24 +1,4 @@
 {
-  "51572638941465:1747.5": {
-    "id": 51572638941465,
-    "title": "LTP-1303LL-7A",
-    "price": 1747.5,
-    "compare_at": 3495.0,
-    "discount_pct": 50.0,
-    "url": "https://casiostore.bhawar.com/products/ltp-1303ll-7a?variant=51572638941465",
-    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/LTP-1303LL-7AV.png?v=1761792072",
-    "seen_at": "2026-10-16T12:40:56.506809"
-  },
-  "51123925582105:1797.5": {
-    "id": 51123925582105,
-    "title": "LTP-SN5YGL-2A",
-    "price": 1797.5,
-    "compare_at": 3595.0,
-    "discount_pct": 50.0,
-    "url": "https://casiostore.bhawar.com/products/casio-ltp-sn5ygl-2a-analog-womens-watch?variant=51123925582105",
-    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/LTP-SN5YGL-2A_20_1.jpg?v=1754304485",
-    "seen_at": "2026-10-16T12:40:58.178483"
-  },
   "51123926040857:1647.5": {
     "id": 51123926040857,
     "title": "LTP-SN5YL-3A",
@@ -308,5 +288,25 @@
     "url": "https://casiostore.bhawar.com/products/casio-ltp-vt04d-7adf-white-analog-womens-watch?variant=50750551097625",
     "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/LTP-VT04D-7A.png?v=1751281838",
     "seen_at": "2026-10-18T12:20:58.043670"
+  },
+  "51572638941465:1747.5": {
+    "id": 51572638941465,
+    "title": "LTP-1303LL-7A",
+    "price": 1747.5,
+    "compare_at": 3495.0,
+    "discount_pct": 50.0,
+    "url": "https://casiostore.bhawar.com/products/ltp-1303ll-7a?variant=51572638941465",
+    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/LTP-1303LL-7AV.png?v=1761792072",
+    "seen_at": "2026-10-18T13:01:29.971486"
+  },
+  "51123925582105:1797.5": {
+    "id": 51123925582105,
+    "title": "LTP-SN5YGL-2A",
+    "price": 1797.5,
+    "compare_at": 3595.0,
+    "discount_pct": 50.0,
+    "url": "https://casiostore.bhawar.com/products/casio-ltp-sn5ygl-2a-analog-womens-watch?variant=51123925582105",
+    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/LTP-SN5YGL-2A_20_1.jpg?v=1754304485",
+    "seen_at": "2026-10-18T13:01:32.949934"
   }
 }
