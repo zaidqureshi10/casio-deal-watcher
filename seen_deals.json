@@ -168,5 +168,25 @@
     "url": "https://casiostore.bhawar.com/products/ltp-sn8yrl-1b?variant=51838294393113",
     "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/LTP-SN8YRL-1B_1.jpg?v=1767946580",
     "seen_at": "2026-10-22T13:21:04.227250"
+  },
+  "50750493098265:1647.5": {
+    "id": 50750493098265,
+    "title": "MTP-1314L-8AV",
+    "price": 1647.5,
+    "compare_at": 3295.0,
+    "discount_pct": 50.0,
+    "url": "https://casiostore.bhawar.com/products/casio-mtp-1314l-8avdf-mens-watch?variant=50750493098265",
+    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/MTP-1314L-8AV_01.jpg?v=1751280219",
+    "seen_at": "2026-10-24T05:01:31.737378"
+  },
+  "50750497030425:1497.5": {
+    "id": 50750497030425,
+    "title": "MTP-VD01BL-1BV",
+    "price": 1497.5,
+    "compare_at": 2995.0,
+    "discount_pct": 50.0,
+    "url": "https://casiostore.bhawar.com/products/casio-mtp-vd01bl-1bvudf-black-analog-mens-watch?variant=50750497030425",
+    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/MTP-VD01BL-1BVU.png?v=1751280337",
+    "seen_at": "2026-10-24T05:01:32.657927"
   }
 }
