@@ -178,5 +178,25 @@
     "url": "https://casiostore.bhawar.com/products/casio-men-mtp-vt03l-7bdf-watch?variant=50750552670489",
     "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/MTP-VT03L-7B.png?v=1751281908",
     "seen_at": "2026-10-27T12:21:03.534625"
+  },
+  "51838292328729:2747.5": {
+    "id": 51838292328729,
+    "title": "LTP-SN6KGSL-7A",
+    "price": 2747.5,
+    "compare_at": 5495.0,
+    "discount_pct": 50.0,
+    "url": "https://casiostore.bhawar.com/products/ltp-sn6kgsl-7a?variant=51838292328729",
+    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/LTP-SN6KGSL-7A_1.jpg?v=1767945484",
+    "seen_at": "2026-10-28T05:20:54.186845"
+  },
+  "50750498996505:2197.5": {
+    "id": 50750498996505,
+    "title": "MTP-VD03B-3A",
+    "price": 2197.5,
+    "compare_at": 4395.0,
+    "discount_pct": 50.0,
+    "url": "https://casiostore.bhawar.com/products/casio-mtp-vd03b-3audf-mens-watch?variant=50750498996505",
+    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/MTP-VD03B-3AU.png?v=1751280377",
+    "seen_at": "2026-10-28T05:20:55.875372"
   }
 }
