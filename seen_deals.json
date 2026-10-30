@@ -1,14 +1,4 @@
 {
-  "50750552572185:1747.5": {
-    "id": 50750552572185,
-    "title": "MTP-VT03BL-7B",
-    "price": 1747.5,
-    "compare_at": 3495.0,
-    "discount_pct": 50.0,
-    "url": "https://casiostore.bhawar.com/products/casio-men-mtp-vt03bl-7bdf-watch?variant=50750552572185",
-    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/MTP-VT03BL-7B.png?v=1751281898",
-    "seen_at": "2026-10-28T06:20:54.189075"
-  },
   "50750543003929:1997.5": {
     "id": 50750543003929,
     "title": "LTP-VT01GL-1B",
@@ -118,5 +108,15 @@
     "url": "https://casiostore.bhawar.com/products/casio-men-mtp-vt03l-7bdf-watch?variant=50750552670489",
     "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/MTP-VT03L-7B.png?v=1751281908",
     "seen_at": "2026-10-30T06:01:28.266574"
+  },
+  "50750552572185:1747.5": {
+    "id": 50750552572185,
+    "title": "MTP-VT03BL-7B",
+    "price": 1747.5,
+    "compare_at": 3495.0,
+    "discount_pct": 50.0,
+    "url": "https://casiostore.bhawar.com/products/casio-men-mtp-vt03bl-7bdf-watch?variant=50750552572185",
+    "image_url": "https://cdn.shopify.com/s/files/1/0910/0073/3977/files/MTP-VT03BL-7B.png?v=1751281898",
+    "seen_at": "2026-10-30T06:40:53.293623"
   }
 }
